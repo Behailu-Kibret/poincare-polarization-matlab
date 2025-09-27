@@ -1,6 +1,6 @@
 # Poincaré Polarization (MATLAB)
 
-**Toolbox-free MATLAB toolkit for polarization analysis and Poincaré-sphere visualization (Balanis convention).**
+**Toolbox-free MATLAB toolkit for polarization analysis and Poincaré-sphere visualization.**
 
 > Implements formulas from Advanced Engineering Electromagnetics (C. A. Balanis). Matches the book’s tau (τ) convention; handles linear and circular edge cases (τ = NaN for circular). No Mapping Toolbox or other add-ons required.
 
@@ -18,7 +18,7 @@
 | Function | Purpose |
 |---|---|
 | `polarization_calculate_and_plot` | Single-entry wrapper: computes the polarization state from (\|Ex\|, ∠Ex, \|Ey\|, ∠Ey) and produces both plots. Returns `out`, the sphere figure handle `fig`, and the ellipse figure handle `fig1`. |
-| `polarization_state_calculate` | Core calculator using Balanis (γ, δ) relations only (Eqs. 4-58…4-61). Outputs γ, δ, ε, σ = 2ε, τ (Balanis executable convention; NaN if circular), AR, type, and sense (IEEE, +z). |
+| `polarization_state_calculate` | Core calculator using Balanis (γ, δ) relations only (Eqs. 4-58…4-61). Outputs γ, δ, ε, σ = 2ε, τ (NaN if circular), AR, type, and sense (IEEE, +z). |
 | `poincare_sphere_plot` | Solid Poincaré-sphere visualization with great-circle arcs 2τ and σ; +x is screen-up, view along +z; skips the 2τ arc for circular states. |
 | `polarization_trace_plot` | Polarization ellipse on the x–y plane with x drawn vertically and arrows indicating rotation direction (IEEE sense for +z). |
 
@@ -49,7 +49,7 @@ fig1 = polarization_trace_plot(out);   % ellipse with x vertical + direction arr
 - **Angles**:  
   γ = atan2(|Ey|, |Ex|), δ = ∠Ey − ∠Ex.  
   sin(2ε) = sin(2γ) sin δ.  
-  τ follows the Balanis executable convention (degrees); τ is undefined (NaN) for circular.
+  τ (degrees); τ is undefined (NaN) for circular.
 - **Linear / Circular**: linear if |ε| ≲ 1°; circular ⇒ τ = NaN.
 - **Axial ratio**: AR = 1/|tan ε| (∞ for linear).
 
