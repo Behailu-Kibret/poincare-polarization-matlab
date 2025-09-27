@@ -1,7 +1,7 @@
 function out = polarization_state_calculate(Ex_mag, Ex_ang_deg, Ey_mag, Ey_ang_deg)
 % Polarization state params (γ, δ, τ, and ε) are calculated based on the equation 4-58 to 4-61 in 
 % Balanis, Advanced Engineering Electromganetics, Second Edition
-% τ is computed via Eq. (4-61b) with the Balanis-executable convention,
+% τ is computed via Eq. (4-61b),
 % BUT τ is undefined (NaN) for circular polarization.
 
 

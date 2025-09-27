@@ -1,7 +1,7 @@
 function [out, fig, fig1] = polarization_calculate_and_plot(Ex_mag, Ex_ang_deg, Ey_mag, Ey_ang_deg)
-% Compute Polarization state params (γ, δ, τ, and ε) of a plane wave traveloing laong =z direction.
-% The params are calculated based on the equation 4-58 to 4-61 in Balanis, Advanced Engineering Electromganetics, Second Edition
-% It also plots Poincaré shere and the polarization trace based on the computed params.
+% Compute Polarization state params (γ, δ, τ, and ε) of a plane wave traveling along +z direction.
+% The params are calculated based on equations 4-58 to 4-61 in Balanis, Advanced Engineering Electromagnetics, Second Edition
+% It also plots Poincaré sphere and the polarization trace based on the computed params.
 % Inputs are phasor magnitudes and angles (deg).
 
      if nargin < 4
